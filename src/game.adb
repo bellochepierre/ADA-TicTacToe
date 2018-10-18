@@ -2,6 +2,7 @@ with Grid; use Grid;
 with Player_Bot_Retard; use Player_Bot_Retard;
 with Case_Value; use Case_Value;
 with Ada.Text_IO; use Ada.Text_IO;
+with Player_Human; use Player_Human;
 package body Game is
 
    package body Constructor is
@@ -9,7 +10,7 @@ package body Game is
       function Initialize return T_Game is
          Jeu : T_Game;
       begin
-         Jeu.PlayerCroix := new T_Player_BR;
+         Jeu.PlayerCroix := new T_Player_H;
          Jeu.PlayerRond := new T_Player_BR;
          return Jeu;
       end Initialize;

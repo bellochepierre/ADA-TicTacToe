@@ -1,7 +1,5 @@
-with Grid; use Grid;
-with Ada.Text_IO; use Ada.Text_IO;
-with Case_Value; use Case_Value;
 with Game; use Game;
+with Ada.Text_IO; use Ada.Text_IO;
 
 procedure Main is
    Jeu : T_Game_Access := new T_Game'(Game.Constructor.Initialize);

@@ -1,6 +1,8 @@
 with Case_Value; use Case_Value;
 package Grid is
-
+   
+   SIZE : constant Integer := 3;
+      
    type T_Grid is tagged private;
    type T_Grid_Access is access T_Grid;
    
@@ -22,13 +24,13 @@ package Grid is
    
    function getWinner(This : in T_Grid) return T_Case_Value;
    -- pre : This.isGameOver == true;
-   -- post : return == Croix || Rond;
+   
+   function isFull(This : in T_Grid) return Boolean;
    
    
 private
    
-   GRID_SIZE : constant Integer := 3;
-   NBR_OF_CASES : constant Integer := GRID_SIZE * GRID_SIZE;
+   NBR_OF_CASES : constant Integer := SIZE * SIZE;
    
    type T_Grid_Matrix is array(1..NBR_OF_CASES) of T_Case_Value;
    
